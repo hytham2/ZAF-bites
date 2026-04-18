@@ -366,7 +366,7 @@ nav{position:sticky;top:0;z-index:200;background:var(--nav);padding:0 20px;heigh
     <div class="pd" id="pinDisp">——</div>
     <div id="pinErr" class="pe">❌ Wrong PIN. Try again.</div>
     <div class="kp" id="keypad"></div>
-    <div class="ph">Admin PIN: 00000000</div>
+  
   </div></div>
 </div>
 
@@ -574,7 +574,7 @@ async function seedIfEmpty(){
   try{const s=await db.collection('restaurants').limit(1).get();if(!s.empty)return;const b=db.batch();DRESTS.forEach(r=>b.set(db.collection('restaurants').doc(r.id),r));await b.commit();}catch(e){console.warn('Seed:',e);}
 }
 
-const APIN='00000000';
+const APIN='47392815';
 let rests=[],orders=[],reqs=[],cart={items:[],rId:null},user=null;
 let dtab='all',atab='all',soundOn=true,lastNew=-1,trId=null,dark=false,meRid=null;
 
